@@ -1,0 +1,3216 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic);
+/*!
+ * jQuery UI CSS Framework 1.10.3
+ * http://jqueryui.com
+ *
+ * Copyright 2013 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ */
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden {
+	display: none;
+}
+.ui-helper-hidden-accessible {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.ui-helper-reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	line-height: 1.3;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
+}
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+	content: "";
+	display: table;
+	border-collapse: collapse;
+}
+.ui-helper-clearfix:after {
+	clear: both;
+}
+.ui-helper-clearfix {
+	min-height: 0; /* support: IE7 */
+}
+.ui-helper-zfix {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	filter:Alpha(Opacity=0);
+}
+
+.ui-front {
+	z-index: 100;
+}
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled {
+	cursor: default !important;
+}
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon {
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/*!
+ * jQuery UI Datepicker 1.10.3
+ * http://jqueryui.com
+ *
+ * Copyright 2013 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Datepicker#theming
+ */
+.ui-datepicker {
+	width: 17em;
+	padding: .2em .2em 0;
+	display: none;
+}
+.ui-datepicker .ui-datepicker-header {
+	position: relative;
+	padding: .2em 0;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	position: absolute;
+	top: 2px;
+	width: 1.8em;
+	height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+	top: 1px;
+}
+.ui-datepicker .ui-datepicker-prev {
+	left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+	right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+	left: 1px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+	right: 1px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -8px;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 2.3em;
+	line-height: 1.8em;
+	text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select {
+	font-size: 1em;
+	margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month-year {
+	width: 100%;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+	width: 49%;
+}
+.ui-datepicker table {
+	width: 100%;
+	font-size: .9em;
+	border-collapse: collapse;
+	margin: 0 0 .4em;
+}
+.ui-datepicker th {
+	padding: .7em .3em;
+	text-align: center;
+	font-weight: bold;
+	border: 0;
+}
+.ui-datepicker td {
+	border: 0;
+	padding: 1px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	padding: .2em;
+	text-align: right;
+	text-decoration: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+	background-image: none;
+	margin: .7em 0 0 0;
+	padding: 0 .2em;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+	float: right;
+	margin: .5em .2em .4em;
+	cursor: pointer;
+	padding: .2em .6em .3em .6em;
+	width: auto;
+	overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+	float: left;
+}
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+	width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+	float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+	width: 95%;
+	margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+	width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+	width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+	width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+	border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+	clear: left;
+}
+.ui-datepicker-row-break {
+	clear: both;
+	width: 100%;
+	font-size: 0;
+}
+
+/* RTL support */
+.ui-datepicker-rtl {
+	direction: rtl;
+}
+.ui-datepicker-rtl .ui-datepicker-prev {
+	right: 2px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next {
+	left: 2px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+	right: 1px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+	left: 1px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+	clear: right;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+	float: left;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-group {
+	float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+	border-right-width: 0;
+	border-left-width: 1px;
+}
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+html,
+body {
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+button {
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  outline: 0 none;
+  cursor: pointer;
+}
+a {
+  font-weight: 600;
+  color: #4e4e56;
+  outline: 0 none;
+  cursor: pointer;
+}
+img {
+  border: 0;
+}
+h1 {
+  font-size: 22px;
+  margin: 0;
+}
+h2 {
+  font-size: 16px;
+}
+header img,
+.header img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearence: none;
+  border: none;
+  padding-right: 12px;
+  background: url("data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='50px'%20height='50px'><polyline%20style='fill:%20#4e4e56;'%20points='50,10%2025,40%200,10'/></svg>") right no-repeat;
+  background-transparency: 0.5;
+  background-position: right 50%;
+  background-size: 8px 8px;
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+}
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearence: none;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  border: 1px solid #c5c5ca;
+  border-radius: 2px;
+}
+input[type='checkbox']:checked {
+  background: #589442;
+  position: relative;
+}
+input[type='checkbox']:checked:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.7em;
+  color: white;
+  content: "\f105";
+}
+.icon {
+  display: inline-block;
+  vertical-align: sub;
+}
+.icon.alert {
+  background: url('../bundles/lafourchettemodulereservation/images/sprite.png') no-repeat -196px -29px;
+  width: 20px;
+  height: 20px;
+}
+.loading {
+  padding-left: 25px;
+  background: #ffffff url('../bundles/lafourchettemodulereservation/images/loader.gif') no-repeat left;
+  color: #303030;
+}
+.icon--inEvidence {
+  font-size: 1.5rem;
+}
+.icon--rightSpaced {
+  margin-right: 0.2rem;
+}
+.icon--greatlyCircled {
+  font-size: 1.5rem;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  box-shadow: inset 5px -5px 5px 0 rgba(0, 0, 0, 0.1);
+}
+.icon--greenBackgroundedIcon {
+  background: #589442;
+}
+.icon--greenBackgroundedIcon:before {
+  text-shadow: #4f863b 2px 2px, #50873c 3px 3px, #51883c 4px 4px, #528a3d 5px 5px, #528b3d 6px 6px, #538c3e 7px 7px, #548d3f 8px 8px, #558f3f 9px 9px, #559040 10px 10px, #569140 11px 11px, #579241 12px 12px, #589442 13px 13px;
+}
+.icon--greyBackgroundedIcon {
+  background: #8b8b91;
+}
+.icon--greyBackgroundedIcon:before {
+  text-shadow: #78787d 1px 1px, #78787d 2px 2px, #78787d 3px 3px, #79797f 4px 4px, #7b7b81 5px 5px, #7d7d83 6px 6px, #7f7f85 7px 7px, #818187 8px 8px, #838389 9px 9px, #85858b 10px 10px, #87878d 11px 11px, #89898f 12px 12px, #8b8b91 13px 13px;
+}
+@font-face {
+  font-family: "tfm-webfont";
+  src: url("../fonts/tfm-webfont.eot");
+  src: url("../fonts/tfm-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/tfm-webfont.woff2") format("woff2"), url("../fonts/tfm-webfont.woff") format("woff"), url("../fonts/tfm-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.icon-webfont,
+input[type='checkbox']:checked,
+.ui-widget-content .ui-datepicker-prev,
+.ui-widget-content .ui-datepicker-next,
+.ui-widget-content .ui-datepicker-prev.ui-state-disabled,
+.ui-widget-content .ui-datepicker-next.ui-state-disabled,
+.body--vertical .ui-widget-content .ui-datepicker-prev,
+.body--vertical .ui-widget-content .ui-datepicker-next {
+  font-family: "tfm-webfont";
+  display: inline-block;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-webfont_book:before {
+  content: "\f101";
+}
+.icon-webfont_bullet:before {
+  content: "\f102";
+}
+.icon-webfont_calendarDots:before {
+  content: "\f103";
+}
+.icon-webfont_chatBubble:before {
+  content: "\f104";
+}
+.icon-webfont_check:before {
+  content: "\f105";
+}
+.icon-webfont_chevronLeft:before {
+  content: "\f106";
+}
+.icon-webfont_circleAlert:before {
+  content: "\f107";
+}
+.icon-webfont_circleArrowLeft:before {
+  content: "\f108";
+}
+.icon-webfont_circleCheck:before {
+  content: "\f109";
+}
+.icon-webfont_circleChevronLeft:before {
+  content: "\f10a";
+}
+.icon-webfont_circleChevronRight:before {
+  content: "\f10b";
+}
+.icon-webfont_circleClock:before {
+  content: "\f10c";
+}
+.icon-webfont_circleCross:before {
+  content: "\f10d";
+}
+.icon-webfont_circleEmpty:before {
+  content: "\f10e";
+}
+.icon-webfont_circlePlus:before {
+  content: "\f10f";
+}
+.icon-webfont_circleQuestion:before {
+  content: "\f110";
+}
+.icon-webfont_circleUser:before {
+  content: "\f111";
+}
+.icon-webfont_cross:before {
+  content: "\f112";
+}
+.icon-webfont_fullTriangleDown:before {
+  content: "\f113";
+}
+.icon-webfont_hamburgerMenu:before {
+  content: "\f114";
+}
+.icon-webfont_horizontalSpacer:before {
+  content: "\f115";
+}
+.icon-webfont_mailEnvelope:before {
+  content: "\f116";
+}
+.icon-webfont_pencil:before {
+  content: "\f117";
+}
+.icon-webfont_people:before {
+  content: "\f118";
+}
+.icon-webfont_phoneCord:before {
+  content: "\f119";
+}
+.icon-webfont_poweredByThefork:before {
+  content: "\f11a";
+}
+.icon-webfont_restaurantExterior:before {
+  content: "\f11b";
+}
+.icon-webfont_speechBubble:before {
+  content: "\f11c";
+}
+.icon-webfont_switchOff:before {
+  content: "\f11d";
+}
+.icon-webfont_thefork:before {
+  content: "\f11e";
+}
+.icon-webfont_trash:before {
+  content: "\f11f";
+}
+.icon-webfont_triangleWarning:before {
+  content: "\f120";
+}
+.icon-webfont_userCard:before {
+  content: "\f121";
+}
+.icon-webfont_verticalDots:before {
+  content: "\f122";
+}
+/**
+ * clearfix for floating blocks
+ */
+.clearfix:before,
+.clearfix:after,
+.content .content-card:before,
+.content .content-card:after,
+.saleType:before,
+.saleType:after,
+.content--horizontal .content-card:before,
+.content--horizontal .content-card:after,
+.content--horizontal .content--horizontal-card:before,
+.content--horizontal .content--horizontal-card:after,
+.content--vertical .content-card:before,
+.content--vertical .content-card:after,
+.content--vertical .content--vertical-card:before,
+.content--vertical .content--vertical-card:after {
+  display: table;
+  content: "";
+}
+.clearfix:after,
+.content .content-card:after,
+.saleType:after,
+.content--horizontal .content-card:after,
+.content--horizontal .content--horizontal-card:after,
+.content--vertical .content-card:after,
+.content--vertical .content--vertical-card:after {
+  clear: both;
+}
+/**
+ * display classes
+ */
+.hide {
+  display: none;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.inline-block {
+  display: inline-block;
+}
+.invisible {
+  visibility: hidden;
+}
+.bigger {
+  font-size: 14px;
+}
+@font-face {
+  font-family: "Omnes";
+  src: url("../fonts/omnes/omnesregular-roman-webfont.eot");
+  src: url("../fonts/omnes/omnesregular-roman-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/omnes/omnesregular-roman-webfont.woff") format("woff"), url("../fonts/omnes/omnesregular-roman-webfont.ttf") format("truetype"), url("../fonts/omnes/omnesregular-roman-webfont.svg#Omnes") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Omnes";
+  src: url("../fonts/omnes/omnesmedium-roman-webfont.eot");
+  src: url("../fonts/omnes/omnesmedium-roman-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/omnes/omnesmedium-roman-webfont.woff") format("woff"), url("../fonts/omnes/omnesmedium-roman-webfont.ttf") format("truetype"), url("../fonts/omnes/omnesmedium-roman-webfont.svg#Omnes") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+#dhp-wrapper .ui-datepicker td.normal a,
+#dhp-wrapper .ui-datepicker td.offer a,
+#dhp-wrapper .ui-datepicker td.cross-st a,
+#dhp-wrapper .ui-datepicker td.cross-rt a {
+  transition: box-shadow 0.3s;
+}
+#dhp-wrapper .ui-datepicker td.normal a.ui-state-active,
+#dhp-wrapper .ui-datepicker td.offer a.ui-state-active,
+#dhp-wrapper .ui-datepicker td.cross-st a.ui-state-active,
+#dhp-wrapper .ui-datepicker td.cross-rt a.ui-state-active {
+  background-color: #4e4e56;
+  color: #ffffff;
+}
+#dhp-wrapper .ui-datepicker td.normal a.ui-state-hover,
+#dhp-wrapper .ui-datepicker td.offer a.ui-state-hover,
+#dhp-wrapper .ui-datepicker td.cross-st a.ui-state-hover,
+#dhp-wrapper .ui-datepicker td.cross-rt a.ui-state-hover {
+  box-shadow: 0 1px 0 0 #c5c5ca, inset 0px -1px 0px 0px #4e4e56;
+}
+#dhp-wrapper .ui-datepicker td.cross-rt a {
+  background: url('../bundles/lafourchettemodulereservation/images/cross-selling.png') no-repeat 22px 2px;
+}
+.ui-widget-content {
+  border: 1px solid #cccccc;
+  background: #f9f9f9 url("/bundles/lafourchettemodulereservation/images/ui-bg_highlight-hard_100_f9f9f9_1x100.png") 50% top repeat-x;
+  color: #222222;
+}
+.dhp-list button {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.dhp-list button.normal,
+.dhp-list button.offer,
+.dhp-list button.cross-st,
+.dhp-list button.cross-rt {
+  transition: box-shadow 0.3s;
+}
+.dhp-list button.normal:hover,
+.dhp-list button.offer:hover,
+.dhp-list button.cross-st:hover,
+.dhp-list button.cross-rt:hover {
+  box-shadow: 0 1px 0 0 #c5c5ca, inset 0px -1px 0px 0px #4e4e56;
+}
+.dhp-list button.offer {
+  background-color: #e14123;
+}
+.dhp-list button.cross-st {
+  background: url('../bundles/lafourchettemodulereservation/images/cross-selling.png') no-repeat 39px 1px;
+}
+.dhp-list button.cross-rt {
+  background: url('../bundles/lafourchettemodulereservation/images/cross-selling.png') no-repeat 52px 2px;
+}
+.dhp-list button.selected {
+  background-color: #4e4e56;
+  color: #ffffff;
+}
+#cross-sell {
+  max-width: 580px;
+  padding: 10px;
+}
+#cross-sell .category > ul > li {
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  border: 1px solid #bfbfbf;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+#cross-sell .menu-details strong {
+  margin: 5px 0;
+  display: block;
+}
+#cross-sell .menu-details li li {
+  padding: 7px 0;
+  border-bottom: 1px dotted #CCC;
+}
+#cross-sell .menu-details li li:last-child {
+  border: 0 none;
+}
+.dhp-legend {
+  padding: 0;
+}
+.three-d-secure-iframe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.payment-iframe-wrapper {
+  position: relative;
+}
+.payment-loader {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.7);
+}
+.payment-loader::before {
+  -webkit-animation: payment-loader-animation 2s infinite;
+  animation: payment-loader-animation 2s infinite;
+  border-radius: 50%;
+  border: 5px solid #a8a8a8;
+  border-top-color: #8b8b91;
+  width: 3.125rem;
+  height: 3.125rem;
+  content: "";
+}
+.payment-loader::after {
+  margin-top: 0.5rem;
+  color: #a8a8a8;
+  font-size: 0.75rem;
+  font-weight: 300;
+  content: attr(data-message);
+  mix-blend-mode: difference;
+}
+@-webkit-keyframes payment-loader-animation {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(2turn);
+  }
+}
+@keyframes payment-loader-animation {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(2turn);
+  }
+}
+.clearfix,
+.content .content-card,
+.saleType,
+.content--horizontal .content-card,
+.content--horizontal .content--horizontal-card,
+.content--vertical .content-card,
+.content--vertical .content--vertical-card {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after,
+.content .content-card:before,
+.content .content-card:after,
+.saleType:before,
+.saleType:after,
+.content--horizontal .content-card:before,
+.content--horizontal .content-card:after,
+.content--horizontal .content--horizontal-card:before,
+.content--horizontal .content--horizontal-card:after,
+.content--vertical .content-card:before,
+.content--vertical .content-card:after,
+.content--vertical .content--vertical-card:before,
+.content--vertical .content--vertical-card:after {
+  content: "";
+  display: table;
+}
+.clearfix:after,
+.content .content-card:after,
+.saleType:after,
+.content--horizontal .content-card:after,
+.content--horizontal .content--horizontal-card:after,
+.content--vertical .content-card:after,
+.content--vertical .content--vertical-card:after {
+  clear: both;
+}
+.loading {
+  background-color: transparent;
+}
+@media only screen and (max-width: 516px) {
+  .hideMobile {
+    display: none;
+  }
+}
+@media only screen and (min-width: 517px) and (max-width: 949px), only screen and (min-width: 950px) and (max-width: 1128px), only screen and (min-width: 1129px) {
+  .showMobile {
+    display: none;
+  }
+}
+.body {
+  color: #4e4e56;
+}
+.body--module {
+  min-width: 320px;
+}
+.body .body-backToTop {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: rgba(78, 78, 86, 0.8);
+  margin: auto;
+  width: 11em;
+  max-width: 100%;
+  padding: 4px 8px;
+  box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.15);
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+@media only screen and (max-width: 259px), only screen and (max-width: 516px), only screen and (max-width: 580px) {
+  .body .body-backToTop {
+    width: 100%;
+  }
+}
+.body .body-backToTop,
+.body .body-backToTop a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+@media only screen and (max-width: 259px), only screen and (max-width: 516px), only screen and (max-width: 580px) {
+  .body .body-backToTop,
+  .body .body-backToTop a {
+    font-size: 1em;
+  }
+}
+.body .body-backToTop.body-backToTop--hidden {
+  opacity: 0;
+}
+.body .body-backToTop.body-backToTop--visible {
+  opacity: 1;
+}
+.body .body-backToTop.body-backToTop--visible:hover {
+  background: #4e4e56;
+}
+.body .body-backToTop a {
+  display: block;
+}
+.body .body-belt {
+  padding: 8px;
+}
+.body .body-content {
+  padding: 16px;
+  min-height: 220px;
+}
+@media only screen and (min-width: 517px) and (max-width: 600px) {
+  .body .body-content {
+    padding: 16px 8px 32px;
+  }
+}
+.body .body-footer {
+  padding: 4px 0;
+}
+.belt {
+  background: #f8f8f8;
+  text-align: center;
+}
+.belt .belt-header {
+  font-weight: 600;
+}
+.belt .belt-subHeader {
+  margin: 0;
+  font-weight: 400;
+}
+.content,
+.content--horizontal,
+.content--vertical {
+  margin: 0px auto;
+  max-width: 560px;
+}
+.content .content-backButton,
+.content--horizontal .content-backButton,
+.content--vertical .content-backButton {
+  float: left;
+  font-size: 0.9em;
+  /*
+     * Attribute selector to match AngularJS pseudo-links made e.g. wirh <span> tags.
+     */
+}
+.content .content-backButton,
+.content .content-backButton > a,
+.content--horizontal .content-backButton,
+.content--horizontal .content-backButton > a,
+.content--vertical .content-backButton,
+.content--vertical .content-backButton > a {
+  color: #8b8b91;
+  text-decoration: none;
+}
+.content .content-backButton a:hover,
+.content .content-backButton *[ng-click],
+.content--horizontal .content-backButton a:hover,
+.content--horizontal .content-backButton *[ng-click],
+.content--vertical .content-backButton a:hover,
+.content--vertical .content-backButton *[ng-click] {
+  cursor: pointer;
+}
+.content .content-editButton,
+.content--horizontal .content-editButton,
+.content--vertical .content-editButton {
+  float: right;
+}
+.content .content-saleType,
+.content--horizontal .content-saleType,
+.content--vertical .content-saleType {
+  margin-left: 5em;
+  margin-right: 5em;
+  color: #e14123;
+  font-weight: 600;
+  text-align: center;
+}
+@media only screen and (max-width: 516px) {
+  .content .content-saleType,
+  .content--horizontal .content-saleType,
+  .content--vertical .content-saleType {
+    float: left;
+    width: 100%;
+    margin: 0;
+  }
+}
+.content .content-greet,
+.content--horizontal .content-greet,
+.content--vertical .content-greet {
+  margin: 8px 0;
+}
+.content .content-divider,
+.content--horizontal .content-divider,
+.content--vertical .content-divider {
+  margin: 8px 0;
+  border: none;
+  height: 1px;
+  background: #dedede;
+}
+.content .content-intro,
+.content--horizontal .content-intro,
+.content--vertical .content-intro {
+  font-size: 0.75rem;
+}
+.content .content-intro .title,
+.content--horizontal .content-intro .title,
+.content--vertical .content-intro .title {
+  font-weight: bold;
+  text-align: center;
+}
+.content .totals,
+.content--horizontal .totals,
+.content--vertical .totals {
+  display: flex;
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+  margin-top: 1em;
+}
+.content .totals .total-left,
+.content--horizontal .totals .total-left,
+.content--vertical .totals .total-left {
+  flex-grow: 4;
+  margin-left: 30px;
+}
+.content .totals .total-right,
+.content--horizontal .totals .total-right,
+.content--vertical .totals .total-right {
+  flex-grow: 1;
+  text-align: center;
+  margin-right: 30px;
+}
+.content .totals .total-right .amount,
+.content--horizontal .totals .total-right .amount,
+.content--vertical .totals .total-right .amount {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.content .totals .total-right .amount-per-person,
+.content--horizontal .totals .total-right .amount-per-person,
+.content--vertical .totals .total-right .amount-per-person {
+  margin-top: 0;
+}
+.content .totals .total-to-pay,
+.content--horizontal .totals .total-to-pay,
+.content--vertical .totals .total-to-pay {
+  font-weight: bold;
+}
+.content .tos,
+.content--horizontal .tos,
+.content--vertical .tos {
+  font-size: 0.75rem;
+}
+.content .content-tos,
+.content--horizontal .content-tos,
+.content--vertical .content-tos {
+  display: none;
+}
+.content .content-whyPassword,
+.content--horizontal .content-whyPassword,
+.content--vertical .content-whyPassword {
+  display: none;
+}
+.content .content-secured,
+.content--horizontal .content-secured,
+.content--vertical .content-secured {
+  text-align: center;
+  text-transform: uppercase;
+}
+.content .content-card,
+.content--horizontal .content-card,
+.content--horizontal .content--horizontal-card,
+.content--vertical .content-card,
+.content--vertical .content--vertical-card {
+  background: #f8f8f8;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+}
+.content--horizontal {
+  margin: 0;
+  max-width: 570px;
+}
+.content--horizontal .content--horizontal-form {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.content--horizontal .content--horizontal-form .form-input--select select,
+.content--horizontal .content--horizontal-form .form-input--withTextyPlaceholder input {
+  cursor: pointer;
+}
+.content--horizontal .content--horizontal-form .cta_additional_options,
+.content--horizontal .content--horizontal-form .cta_additional_options:hover {
+  width: 100%;
+  background: #589442;
+}
+.content--horizontal .content--horizontal-belt {
+  background: #589442;
+  margin: -8px -8px 8px;
+  height: 26px;
+}
+.content--horizontal .content--horizontal-belt a {
+  display: block;
+  height: 100%;
+}
+.content--horizontal .content--horizontal-belt a img {
+  margin: 1px;
+}
+.content--horizontal .content--horizontal-actions {
+  padding-top: 4px;
+}
+.content--horizontal .content--horizontal-card {
+  overflow: hidden;
+  padding: 8px;
+}
+.content--vertical {
+  margin: 0;
+  width: 160px;
+}
+.content--vertical .content--vertical-form .form-row {
+  margin: 10px 0;
+}
+.content--vertical .content--vertical-form .form-input--select select,
+.content--vertical .content--vertical-form .form-input--basic input {
+  cursor: pointer;
+}
+.content--vertical .content--vertical-form .form-input--basic input[type="text"] {
+  margin-top: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background: white;
+}
+.content--vertical .content--vertical-form .form-input--select {
+  margin-top: 4px;
+  padding-right: 8px;
+  background-color: white;
+}
+.content--vertical .content--vertical-form .form-input--select select {
+  margin-top: 0;
+  padding: 4px;
+}
+.content--vertical .content--vertical-form .form-label--block .icon--inEvidence {
+  font-size: 1.2rem;
+}
+.content--vertical .content--vertical-form .form-label--block .icon--rightSpaced {
+  margin-right: 0.1rem;
+}
+.content--vertical .content--vertical-form .cta_additional_options,
+.content--vertical .content--vertical-form .cta_additional_options:hover {
+  width: 100%;
+  background: #589442;
+}
+.content--vertical .content--vertical-card {
+  overflow: hidden;
+  margin: 0;
+  padding: 4px;
+}
+.content--vertical .content--vertical-belt {
+  background: #589442;
+  margin: -4px -4px 0;
+  height: 25px;
+}
+.content--vertical .content--vertical-belt a {
+  display: block;
+  height: 100%;
+}
+.content--vertical .content--vertical-belt a img {
+  margin-top: 1px;
+}
+.contentRecap,
+.contentRecap--thankYou {
+  text-align: center;
+}
+.contentRecap p,
+.contentRecap--thankYou p {
+  margin: 0.5em 0;
+}
+.contentRecap strong,
+.contentRecap--thankYou strong {
+  vertical-align: middle;
+  font-weight: 600;
+}
+.contentRecap .contentRecap-verticalDivider,
+.contentRecap--thankYou .contentRecap-verticalDivider,
+.contentRecap--thankYou .contentRecap--thankYou-verticalDivider {
+  text-indent: -999em;
+  overflow: hidden;
+  width: 1px;
+  background: #dedede;
+  margin: 0 0.5em;
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.5em;
+}
+.contentRecap .contentRecap-saleTypeTitle,
+.contentRecap--thankYou .contentRecap-saleTypeTitle {
+  font-size: 0.8em;
+  max-width: 23em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  color: #e14123;
+}
+.contentRecap--thankYou .contentRecap--thankYou-highlight {
+  font-family: 'Omnes';
+  font-weight: 500;
+  padding: 1px 16px;
+  border-radius: 64px;
+  display: inline-block;
+  color: #ffffff;
+  text-transform: lowercase;
+}
+.contentRecap--thankYou .contentRecap--thankYou-highlight strong {
+  font-weight: 400;
+}
+.contentRecap--thankYou .contentRecap--thankYou-highlight .icon-webfont {
+  font-weight: 600;
+}
+.contentRecap--thankYou .contentRecap--thankYou-greenBackgrounded {
+  background: #589442;
+}
+.contentRecap--thankYou .contentRecap--thankYou-greyBackgrounded {
+  background: #8b8b91;
+}
+.contentRecap--thankYou .contentRecap--thankYou-verticalDivider {
+  border-top: 8px solid #ffffff;
+  border-bottom: 8px solid #ffffff;
+  background: #ffffff;
+  margin: 0 0.8em;
+}
+.contentRecap--thankYou .contentRecap--thankYou-saleTypeTitle {
+  padding: 2px 8px;
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 7em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: black;
+}
+@media only screen and (max-width: 516px) {
+  .contentRecap--thankYou .contentRecap--thankYou-saleTypeTitle {
+    max-width: 100%;
+    white-space: normal;
+  }
+}
+.thankYou {
+  font-family: 'Omnes';
+  font-weight: 400;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.thankYou .thankYou-big {
+  font-family: 'Omnes';
+  font-weight: 500;
+  margin: auto;
+  max-width: 16em;
+  font-size: 1.4em;
+}
+.thankYou .thankYou-pale {
+  color: #8b8b91;
+}
+.thankYou.bold.m_b {
+  max-width: 22em;
+  margin: 2em auto;
+}
+.thankYou .paymentLegalDisclaimer {
+  font-size: 0.75rem;
+}
+.thankYou .thankYou-flash {
+  padding: 1rem;
+  font-size: 0.75rem;
+  font-style: italic;
+}
+.form .form-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.form .form-fieldset p {
+  margin: 0.5em 0;
+}
+.form .form-actions {
+  zoom: 1;
+}
+.form .form-actions:before,
+.form .form-actions:after {
+  content: "";
+  display: table;
+}
+.form .form-actions:after {
+  clear: both;
+}
+.form .form-disclaimer {
+  font-size: 0.8rem;
+}
+.form .form-row {
+  zoom: 1;
+  margin: 8px 0;
+}
+.form .form-row:before,
+.form .form-row:after {
+  content: "";
+  display: table;
+}
+.form .form-row:after {
+  clear: both;
+}
+.form .form-col,
+.form .form-col--quarter,
+.form .form-col--left,
+.form .form-col--right,
+.form .form-col--civility,
+.form .form-col--firstName,
+.form .form-col--lastName {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+}
+.form .form-col--quarter {
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 25%;
+  border-left: 1px solid #c5c5ca;
+}
+.form .form-col--quarter:first-child {
+  border-left: none;
+}
+.form .form-col--left {
+  padding: 0 4px 0 0;
+}
+.form .form-col--right {
+  padding: 0 0 0 4px;
+}
+.form .form-col--civility {
+  width: 22%;
+  padding: 0 4px 0 0;
+}
+.form .form-col--firstName {
+  width: 28%;
+  padding: 0 2px 0 4px;
+}
+.form .form-col--lastName {
+  width: 50%;
+  padding: 0 0 0 4px;
+}
+@media only screen and (max-width: 580px) {
+  .form .form-row--responsive margin:0 .form-col {
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .form .form-row--responsive .form-col--left,
+  .form .form-row--responsive .form-col--right {
+    zoom: 1;
+    padding: 0;
+    float: none;
+    width: 100%;
+  }
+  .form .form-row--responsive .form-col--left:before,
+  .form .form-row--responsive .form-col--right:before,
+  .form .form-row--responsive .form-col--left:after,
+  .form .form-row--responsive .form-col--right:after {
+    content: "";
+    display: table;
+  }
+  .form .form-row--responsive .form-col--left:after,
+  .form .form-row--responsive .form-col--right:after {
+    clear: both;
+  }
+  .form .form-row--responsive .form-col--left {
+    margin-bottom: 8px;
+  }
+  .form .form-row--responsive .form-col--civility {
+    width: 28%;
+  }
+  .form .form-row--responsive .form-col--firstName {
+    width: 72%;
+    margin-bottom: 8px;
+  }
+  .form .form-row--responsive .form-col--lastName {
+    float: none;
+    padding-left: 0;
+    width: 100%;
+  }
+}
+.form .form-errors ul,
+.form .form-errors li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.form .form-errors ul {
+  font-size: 0.8em;
+  padding: 4px;
+  color: #e52814;
+}
+.form .form-labeledContainer {
+  overflow: hidden;
+}
+.form .form-label--block {
+  display: block;
+  text-align: left;
+}
+.form .form-label--float {
+  float: left;
+  margin-top: 8px;
+}
+.form .form-input,
+.form .form-input--text,
+.form .form-input--textOver,
+.form .form-input--choice,
+.form .form-input--inlineSelect,
+.form .form-input--select,
+.form .form-input--group,
+.form .form-input--borderedSelect {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form .form-input--text input[type="text"],
+.form .form-input--text input[type="password"],
+.form .form-input--text input[type="email"],
+.form .form-input--text textarea {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  font-size: 1rem;
+  border-radius: 2px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #c5c5ca;
+}
+.form .form-input--text input[type="text"].disabled,
+.form .form-input--text input[type="password"].disabled,
+.form .form-input--text input[type="email"].disabled,
+.form .form-input--text textarea.disabled {
+  background-color: #ececec;
+  cursor: initial;
+}
+.form .form-input--textOver {
+  position: relative;
+  border: 1px solid #c5c5ca;
+  border-radius: 2px;
+}
+.form .form-input--textOver input[type="text"],
+.form .form-input--textOver input[type="password"],
+.form .form-input--textOver input[type="email"],
+.form .form-input--textOver textarea {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  font-size: 1rem;
+  padding: 8px 5em 8px 8px;
+  border: 0;
+  width: 100%;
+}
+.form .form-input--choice {
+  border-radius: 2px;
+  width: 100%;
+}
+.form .form-input--choice .radio {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 8px;
+  background-color: #fafafa;
+  box-shadow: 0 1px 0 0 #cdcdcd, 0 0 1px 0 #cdcdcd;
+  border-radius: 2px;
+}
+.form .form-input--inlineSelect {
+  padding: 8px;
+  border: 1px solid #c5c5ca;
+}
+.form .form-input--inlineSelect > div {
+  display: inline-block;
+}
+.form .form-input--inlineSelect label {
+  display: inline;
+}
+.form .form-input--inlineSelect select {
+  background-color: #f8f8f8;
+  margin-top: -4px;
+  margin-bottom: -4px;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  border-left: 4px solid #f8f8f8;
+  border-right: 4px solid #f8f8f8;
+}
+.form .form-input--basic input[type="text"],
+.form .form-input--basic input[type="password"],
+.form .form-input--basic input[type="email"],
+.form .form-input--basic textarea {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: transparent;
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: none;
+}
+.form .form-input--basic input[type="text"].disabled,
+.form .form-input--basic input[type="password"].disabled,
+.form .form-input--basic input[type="email"].disabled,
+.form .form-input--basic textarea.disabled {
+  background-color: #ececec;
+  cursor: initial;
+}
+.form .form-input--horizontallyPadded input[type="text"],
+.form .form-input--horizontallyPadded input[type="password"],
+.form .form-input--horizontallyPadded input[type="email"],
+.form .form-input--horizontallyPadded textarea {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.form .form-input--withTextyPlaceholder input[type="text"] .placeholder,
+.form .form-input--withTextyPlaceholder input[type="password"] .placeholder,
+.form .form-input--withTextyPlaceholder input[type="email"] .placeholder,
+.form .form-input--withTextyPlaceholder textarea .placeholder {
+  color: #4e4e56;
+  opacity: 1;
+}
+.form .form-input--withTextyPlaceholder input[type="text"]::-webkit-input-placeholder,
+.form .form-input--withTextyPlaceholder input[type="password"]::-webkit-input-placeholder,
+.form .form-input--withTextyPlaceholder input[type="email"]::-webkit-input-placeholder,
+.form .form-input--withTextyPlaceholder textarea::-webkit-input-placeholder {
+  /* Safari, Chrome and Opera */
+  color: #4e4e56;
+  opacity: 1;
+}
+.form .form-input--withTextyPlaceholder input[type="text"]:-moz-placeholder,
+.form .form-input--withTextyPlaceholder input[type="password"]:-moz-placeholder,
+.form .form-input--withTextyPlaceholder input[type="email"]:-moz-placeholder,
+.form .form-input--withTextyPlaceholder textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #4e4e56;
+  opacity: 1;
+}
+.form .form-input--withTextyPlaceholder input[type="text"]::-moz-placeholder,
+.form .form-input--withTextyPlaceholder input[type="password"]::-moz-placeholder,
+.form .form-input--withTextyPlaceholder input[type="email"]::-moz-placeholder,
+.form .form-input--withTextyPlaceholder textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #4e4e56;
+  opacity: 1;
+}
+.form .form-input--withTextyPlaceholder input[type="text"]:-ms-input-placeholder,
+.form .form-input--withTextyPlaceholder input[type="password"]:-ms-input-placeholder,
+.form .form-input--withTextyPlaceholder input[type="email"]:-ms-input-placeholder,
+.form .form-input--withTextyPlaceholder textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #4e4e56;
+  opacity: 1;
+}
+.form .form-input--withTextyPlaceholder input[type="text"]::-ms-input-placeholder,
+.form .form-input--withTextyPlaceholder input[type="password"]::-ms-input-placeholder,
+.form .form-input--withTextyPlaceholder input[type="email"]::-ms-input-placeholder,
+.form .form-input--withTextyPlaceholder textarea::-ms-input-placeholder {
+  /* Edge */
+  color: #4e4e56;
+  opacity: 1;
+}
+.form .form-input--withTextyPlaceholder input[type="text"]:placeholder-shown,
+.form .form-input--withTextyPlaceholder input[type="password"]:placeholder-shown,
+.form .form-input--withTextyPlaceholder input[type="email"]:placeholder-shown,
+.form .form-input--withTextyPlaceholder textarea:placeholder-shown {
+  /* Standard one last! */
+  color: #4e4e56;
+  opacity: 1;
+}
+.form .form-input--select select {
+  margin-top: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+.form .form-input--select select.disabled {
+  background-color: #ececec;
+  cursor: initial;
+}
+.form .form-input--borderedSelect {
+  border-radius: 2px;
+  padding: 8px;
+  border: 1px solid #c5c5ca;
+}
+.form .form-input--borderedSelect select {
+  width: 100%;
+}
+.form .form-input--group {
+  background: white;
+}
+.form .form-link--pale,
+.form .form-link--pale a {
+  color: #8b8b91;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  font-weight: 400;
+  display: block;
+  text-align: right;
+  padding: 8px;
+  line-height: 1rem;
+}
+.form-link--floatRight {
+  float: right;
+  padding: 0 6px;
+  font-size: 0.9em;
+}
+.form-link--floatRight a {
+  color: #8b8b91;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.form-link--overInput {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  padding: 0 6px;
+  font-size: 0.9em;
+}
+.form-link--overInput a {
+  color: #8b8b91;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.form-link--overFlex {
+  padding: 8px 12px;
+  font-size: 1em;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.form-link--overFlex a {
+  color: #8b8b91;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.formGroup {
+  zoom: 1;
+  border-radius: 2px;
+  border: 1px solid #c5c5ca;
+}
+.formGroup:before,
+.formGroup:after {
+  content: "";
+  display: table;
+}
+.formGroup:after {
+  clear: both;
+}
+.formGroup.disabled {
+  background-color: #ececec;
+  cursor: initial;
+}
+.formGroup .formGroup-aside,
+.formGroup .formGroup-aside--half {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 5em;
+  padding: 0 4px;
+}
+.formGroup .formGroup-aside--half {
+  width: 50%;
+}
+.formGroup .formGroup-main,
+.formGroup .formGroup-main--half {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: auto;
+  overflow: hidden;
+  border-left: 1px solid #c5c5ca;
+}
+.formGroup .formGroup-main--half {
+  width: 50%;
+}
+.footer-transparent {
+  background: transparent;
+  color: #000000;
+  text-align: center;
+  padding: 0;
+}
+.footer-transparent img {
+  vertical-align: middle;
+  width: 240px;
+}
+@media only screen and (max-width: 516px) {
+  .footer-transparent img {
+    width: 290px;
+  }
+}
+.footer {
+  background: #589442;
+  color: #ffffff;
+  text-align: center;
+  padding: 0;
+}
+.footer img {
+  vertical-align: middle;
+  width: 240px;
+}
+@media only screen and (max-width: 516px) {
+  .footer img {
+    width: 290px;
+  }
+}
+.dhpSteps {
+  margin: 4px -8px 0 -8px;
+}
+.dhpSteps .dhpSteps-col,
+.dhpSteps .dhpSteps-col--left,
+.dhpSteps .dhpSteps-col--right {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+@media only screen and (max-width: 516px) {
+  .dhpSteps .dhpSteps-col,
+  .dhpSteps .dhpSteps-col--left,
+  .dhpSteps .dhpSteps-col--right {
+    float: none;
+    width: auto;
+  }
+}
+@media only screen and (min-width: 517px) and (max-width: 949px), only screen and (min-width: 950px) and (max-width: 1128px), only screen and (min-width: 1129px) {
+  .dhpSteps .dhpSteps-col,
+  .dhpSteps .dhpSteps-col--left,
+  .dhpSteps .dhpSteps-col--right {
+    float: left;
+    width: 50%;
+  }
+}
+.dhpSteps .dhpSteps-col--fullWidth {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+.dhpSteps .dhpSteps-button {
+  width: 100%;
+  font-size: 0.9rem;
+}
+@media only screen and (max-width: 516px) {
+  .body:not(.body--horizontal) .dhpSteps .dhpSteps-button,
+  .body:not(.body--vertical) .dhpSteps .dhpSteps-button {
+    font-size: 1rem;
+  }
+}
+.dhpStep {
+  margin-bottom: 1em;
+}
+.dhpStep .dhpStep-header {
+  margin: 4px 0 8px 2.2rem;
+  margin-left: 2.2rem;
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 1.1em;
+  text-indent: -1rem;
+}
+.dhpStep .dhpStep-subHeader {
+  margin: 0 0 4px;
+  font-weight: 600;
+  font-size: 1em;
+}
+.dhpStep .dhpStep-subHeader,
+.dhpStep .dhpStep-subHeader h1,
+.dhpStep .dhpStep-subHeader h2,
+.dhpStep .dhpStep-subHeader h3,
+.dhpStep .dhpStep-subHeader h4,
+.dhpStep .dhpStep-subHeader h5,
+.dhpStep .dhpStep-subHeader h6 {
+  color: #4e4e56;
+}
+.dhpStep .dhpStep-content {
+  zoom: 1;
+  padding: 4px 8px;
+  background: #fafafa;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+}
+.dhpStep .dhpStep-content:before,
+.dhpStep .dhpStep-content:after {
+  content: "";
+  display: table;
+}
+.dhpStep .dhpStep-content:after {
+  clear: both;
+}
+@media only screen and (min-width: 517px) and (max-width: 600px) {
+  .dhpStep .dhpStep-content {
+    padding: 8px 4px;
+  }
+}
+@media only screen and (max-width: 516px) {
+  .dhpStep .dhpStep-content {
+    padding: 8px;
+  }
+}
+.dhpStep .dhpStep-list {
+  margin: 0 -2px 4px;
+  padding: 0;
+  list-style: none;
+}
+.dhpStep .dhpStep-list button {
+  height: 32px;
+  background: #ffffff;
+  border: 0;
+  padding: 0;
+  line-height: 14px;
+  font-weight: 600;
+  box-shadow: 0 1px 0 0 #c5c5ca;
+  transition: box-shadow 0.3s;
+}
+@media only screen and (max-width: 516px) {
+  .dhpStep .dhpStep-list button {
+    height: 36px;
+  }
+}
+.dhpStep .dhpStep-list button.offer {
+  padding: 3px 3px 0 3px;
+}
+.dhpStep .dhpStep-list button:hover {
+  box-shadow: 0 1px 0 0 #c5c5ca, inset 0px -1px 0px 0px #4e4e56;
+}
+.dhpStep .dhpStep-list button.selected {
+  background: #4e4e56;
+}
+.dhpStep .dhpStep-datePicker .ui-datepicker-calendar {
+  margin: 0 -2px;
+}
+.dhpStep .dhpStep-datePicker td {
+  width: 14.28%;
+  position: relative;
+  padding: 3px 2px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 516px) {
+  .dhpStep .dhpStep-datePicker td .body:not(.body--horizontal),
+  .dhpStep .dhpStep-datePicker td .body:not(.body--vertical) {
+    padding: 6px 2px;
+  }
+}
+.timeStep .timeStep-item {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  margin: 0;
+  padding: 2px 4px;
+  width: 25%;
+}
+@media only screen and (max-width: 516px) {
+  .timeStep .timeStep-item {
+    padding: 4px;
+  }
+}
+.paxStep .paxStep-item,
+.paxStep .paxStep-item--dhp,
+.paxStep .paxStep-item--pdh {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  margin: 0;
+  padding: 2px 4px;
+}
+@media only screen and (max-width: 516px) {
+  .paxStep .paxStep-item,
+  .paxStep .paxStep-item--dhp,
+  .paxStep .paxStep-item--pdh {
+    padding: 4px;
+  }
+}
+.paxStep .paxStep-item--dhp {
+  width: 25%;
+}
+@media only screen and (max-width: 516px) {
+  .paxStep .paxStep-item--pdh {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 517px) and (max-width: 949px), only screen and (min-width: 950px) and (max-width: 1128px), only screen and (min-width: 1129px) {
+  .paxStep .paxStep-item--pdh {
+    width: 12.5%;
+  }
+}
+.paxStep .paxStep-more--pdh {
+  margin-bottom: 0.5em;
+}
+.dhpLegend {
+  clear: both;
+  font-size: 0.75em;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+.normal .dhpLegend {
+  display: none;
+}
+.dhpLegend .dhpLegend-item,
+.dhpLegend .dhpLegend-item--dhp,
+.dhpLegend .dhpLegend-item--pdh {
+  margin-bottom: 8px;
+  list-style: none;
+  line-height: 2em;
+}
+.dhpLegend .dhpLegend-item:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 259px), only screen and (max-width: 516px), only screen and (max-width: 580px) {
+  .dhpLegend .dhpLegend-item--pdh {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 517px) and (max-width: 949px), only screen and (min-width: 950px) and (max-width: 1128px), only screen and (min-width: 1129px) {
+  .dhpLegend .dhpLegend-item--pdh {
+    float: left;
+    width: 50%;
+  }
+}
+.dhpLegend .dhpLegend-marker,
+.dhpLegend .dhpLegend-marker--currentSelectedOfferAvailable,
+.dhpLegend .dhpLegend-marker--currentSelectedOfferAvailable:after,
+.dhpLegend .dhpLegend-marker--otherOfferAvailable,
+.dhpLegend .dhpLegend-marker--otherOfferAvailable:after,
+.dhpLegend .dhpLegend-marker--normalReservationAvailable,
+.dhpLegend .dhpLegend-marker--reservationUnavailable {
+  border-radius: 2px;
+  width: 1.8em;
+  height: 1.8em;
+  margin-right: 0.2em;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+.dhpLegend .dhpLegend-marker--currentSelectedOfferAvailable {
+  box-shadow: 0 1px 0 0 #cdcdcd, 0 0 1px 0 #cdcdcd;
+}
+.dhpLegend .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  display: block;
+  width: 18px;
+  margin: auto;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size: 7px;
+  text-align: center;
+  line-height: 12px;
+  font-weight: 600;
+  color: #e14123;
+  overflow: hidden;
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+}
+.dhpLegend .dhpLegend-marker--otherOfferAvailable {
+  background: #ffffff;
+  box-shadow: 0 1px 0 0 #cdcdcd, 0 0 1px 0 #cdcdcd;
+}
+.dhpLegend .dhpLegend-marker--otherOfferAvailable:after {
+  content: "\25CF";
+  display: block;
+  text-align: right;
+  margin: 0 3px;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-weight: normal;
+  color: #e14123;
+  position: absolute;
+  bottom: -3px;
+  right: -2px;
+}
+.dhpLegend .dhpLegend-marker--normalReservationAvailable {
+  background: #ffffff;
+  box-shadow: 0 1px 0 0 #cdcdcd, 0 0 1px 0 #cdcdcd;
+}
+.dhpLegend .dhpLegend-marker--reservationUnavailable {
+  background: #f3f4f5;
+  box-shadow: 0px 0px 0px 1px #f3f4f5;
+}
+.button,
+.button--bordered,
+.button--callToAction,
+.button--uppercase,
+.button--callToAnotherAction,
+.button--fullWidth,
+.ui-widget-content td span,
+.ui-widget-content td a {
+  border-radius: 2px;
+  font-size: 0.9rem;
+  padding: 0.4em 1em;
+  display: inline-block;
+  background: #f3f4f5;
+}
+.button--bordered {
+  border: 1px solid #cdcdcd;
+}
+.button--callToAction {
+  border-radius: 4px;
+  background: #589442;
+}
+.button--callToAction.big {
+  font-size: 1.1em;
+  padding: 0.5em 1.5em;
+}
+.button--callToAction,
+.button--callToAction a {
+  border: none;
+  color: white;
+  text-decoration: none;
+}
+.button--callToAction:hover {
+  box-shadow: inset 0px -2px 0px 0px #4e4e56;
+}
+.button--uppercase {
+  border-radius: 4px;
+  background: #589442;
+}
+.button--uppercase,
+.button--uppercase a {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.button--callToAnotherAction {
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  border-radius: 2px;
+  padding: 4px 24px;
+  background: #ffffff;
+  border: 1px solid #535353;
+  color: #535353;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.button--callToAnotherAction:hover {
+  background-color: #589442;
+  color: #ffffff;
+}
+.button--fullWidth {
+  width: 100%;
+  text-align: center;
+}
+.loginPopin {
+  padding: 24px;
+}
+.loginPopin .loginPopin-header {
+  text-align: center;
+  font-weight: 400;
+}
+.loginPopin .loginPopin-divider,
+.loginPopin .loginPopin-divider--spaced,
+.loginPopin .loginPopin-divider--narrow,
+.loginPopin .loginPopin-divider--pale {
+  text-align: center;
+}
+.loginPopin .loginPopin-divider--spaced {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.loginPopin .loginPopin-divider--narrow {
+  width: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.loginPopin .loginPopin-divider--pale {
+  border: none;
+  height: 1px;
+  background: #cdcdcd;
+}
+.ui-datepicker {
+  padding: 0;
+  background: #fafafa;
+}
+.body--horizontal .ui-datepicker {
+  display: none;
+  padding: 0.4em 0.4em 0;
+}
+.body--vertical .ui-datepicker {
+  display: none;
+  padding: 0.4em 0.4em 0;
+  width: 100%;
+}
+.ui-datepicker-header {
+  padding: 0;
+}
+@media only screen and (max-width: 516px) {
+  .dhpSteps .ui-datepicker-header {
+    padding: 0.3em 0;
+  }
+  .dhpSteps .ui-datepicker-header .ui-datepicker-title {
+    line-height: 1.1em;
+  }
+}
+.ui-datepicker-title {
+  padding-bottom: 8px;
+  font-size: 1.1em;
+}
+.body .ui-datepicker-title {
+  line-height: 1em;
+}
+.body--horizontal .ui-datepicker-title {
+  line-height: 1.3em;
+}
+.body--vertical .ui-datepicker-title {
+  line-height: 1.2em;
+}
+@media only screen and (max-width: 259px) {
+  .body--vertical .ui-datepicker-title {
+    padding-bottom: 4px;
+    font-size: 0.8rem;
+  }
+}
+.ui-widget-content {
+  display: block;
+  border: none;
+  background: #fafafa;
+  color: #34373f;
+}
+.datePicker .ui-widget-content {
+  width: 100%;
+}
+.body--horizontal .ui-widget-content .ui-datepicker-prev,
+.body--horizontal .ui-widget-content .ui-datepicker-next {
+  margin-top: 0.1em;
+}
+.body--vertical .ui-widget-content {
+  max-width: 240px;
+  min-width: 139px;
+}
+@media only screen and (max-width: 259px) {
+  .body--vertical .ui-widget-content {
+    width: 87%;
+  }
+}
+.ui-widget-content th {
+  padding: 0.4em 0.3em;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+@media only screen and (max-width: 259px) {
+  .body--vertical .ui-widget-content th {
+    padding: 1px;
+    font-size: 0.75rem;
+  }
+}
+@media only screen and (max-width: 259px) {
+  .body--vertical .ui-widget-content th span {
+    text-transform: lowercase;
+  }
+}
+.ui-widget-content td span,
+.ui-widget-content td a {
+  height: 32px;
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+@media only screen and (max-width: 516px) {
+  .ui-widget-content td span,
+  .ui-widget-content td a {
+    height: 38px;
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 259px) {
+  .body--vertical .ui-widget-content td span,
+  .body--vertical .ui-widget-content td a {
+    padding: 2px;
+    font-size: 0.75rem;
+  }
+}
+@media only screen and (max-width: 516px) {
+  .ui-widget-content td span .body:not(.body--horizontal),
+  .ui-widget-content td a .body:not(.body--horizontal),
+  .ui-widget-content td span .body:not(.body--vertical),
+  .ui-widget-content td a .body:not(.body--vertical) {
+    font-size: 1rem;
+  }
+  .ui-widget-content td span .body:not(.body--horizontal) .dhpSteps:not(.normal),
+  .ui-widget-content td a .body:not(.body--horizontal) .dhpSteps:not(.normal),
+  .ui-widget-content td span .body:not(.body--vertical) .dhpSteps:not(.normal),
+  .ui-widget-content td a .body:not(.body--vertical) .dhpSteps:not(.normal) {
+    height: 35px;
+  }
+}
+.ui-widget-content td span {
+  background: transparent;
+  color: #d4d4d7;
+}
+.normal .ui-widget-content td span {
+  padding: 6px 3px;
+  height: 100%;
+}
+.body--vertical .ui-widget-content td span,
+.body--horizontal .ui-widget-content td span {
+  padding: 3px 0;
+  height: 100%;
+}
+.ui-widget-content td a {
+  padding: 0;
+  background: #ffffff;
+  color: #34373f;
+  font-weight: 600;
+  box-shadow: 0 1px 0 0 #c5c5ca;
+}
+.normal .ui-widget-content td a {
+  padding: 6px 3px;
+  height: 100%;
+}
+.body--vertical .ui-widget-content td a,
+.body--horizontal .ui-widget-content td a {
+  padding: 3px 0;
+  height: 100%;
+}
+.ui-widget-content td a.ui-state-active {
+  background-color: #4e4e56;
+  color: white;
+}
+.ui-widget-content td.ui-datepicker-today a {
+  font-weight: 600;
+}
+.ui-widget-content td.cross-st a {
+  background: #ffffff;
+}
+.ui-widget-content .ui-datepicker-calendar {
+  border-top: 1px dotted #d4d4d7;
+}
+.ui-widget-content .ui-datepicker-prev,
+.ui-widget-content .ui-datepicker-next {
+  font-size: 1.5rem;
+  color: #34373f;
+  width: auto;
+  height: auto;
+}
+.ui-widget-content .ui-datepicker-prev.ui-state-disabled,
+.ui-widget-content .ui-datepicker-next.ui-state-disabled {
+  color: #939396;
+}
+.body--vertical .ui-widget-content .ui-datepicker-prev,
+.body--vertical .ui-widget-content .ui-datepicker-next {
+  font-size: 1.2rem;
+  margin-top: 0.2em;
+}
+@media only screen and (max-width: 259px) {
+  .body--vertical .ui-widget-content .ui-datepicker-prev,
+  .body--vertical .ui-widget-content .ui-datepicker-next {
+    margin-top: 0.1em;
+    font-size: 1rem;
+  }
+}
+.ui-widget-content .ui-datepicker-prev-hover {
+  left: 2px;
+  top: 2px;
+}
+.ui-widget-content .ui-datepicker-next-hover {
+  right: 2px;
+  top: 2px;
+}
+.ui-widget-content .ui-datepicker-prev:before {
+  content: "\f10a";
+}
+.ui-widget-content .ui-datepicker-next:before {
+  content: "\f10b";
+}
+.discountAmount:not(.menu) td.offer a:after,
+.discountAmount:not(.menu) button.offer:after {
+  display: block;
+  width: 100%;
+  max-width: 28px;
+  margin: auto;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 10px;
+  color: #e14123;
+  overflow: hidden;
+}
+@media only screen and (max-width: 516px) {
+  .discountAmount:not(.menu) td.offer a:after,
+  .discountAmount:not(.menu) button.offer:after {
+    line-height: 13px;
+  }
+}
+.discountAmount:not(.menu) td.offer a.selected:after,
+.discountAmount:not(.menu) button.offer.selected:after,
+.discountAmount:not(.menu) td.offer a.ui-state-active:after,
+.discountAmount:not(.menu) button.offer.ui-state-active:after {
+  color: white;
+}
+.discountAmount--100 td.offer a:after,
+.discountAmount--100 button.offer:after,
+.discountAmount--100 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-100%";
+}
+.discountAmount--99 td.offer a:after,
+.discountAmount--99 button.offer:after,
+.discountAmount--99 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-99%";
+}
+.discountAmount--98 td.offer a:after,
+.discountAmount--98 button.offer:after,
+.discountAmount--98 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-98%";
+}
+.discountAmount--97 td.offer a:after,
+.discountAmount--97 button.offer:after,
+.discountAmount--97 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-97%";
+}
+.discountAmount--96 td.offer a:after,
+.discountAmount--96 button.offer:after,
+.discountAmount--96 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-96%";
+}
+.discountAmount--95 td.offer a:after,
+.discountAmount--95 button.offer:after,
+.discountAmount--95 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-95%";
+}
+.discountAmount--94 td.offer a:after,
+.discountAmount--94 button.offer:after,
+.discountAmount--94 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-94%";
+}
+.discountAmount--93 td.offer a:after,
+.discountAmount--93 button.offer:after,
+.discountAmount--93 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-93%";
+}
+.discountAmount--92 td.offer a:after,
+.discountAmount--92 button.offer:after,
+.discountAmount--92 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-92%";
+}
+.discountAmount--91 td.offer a:after,
+.discountAmount--91 button.offer:after,
+.discountAmount--91 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-91%";
+}
+.discountAmount--90 td.offer a:after,
+.discountAmount--90 button.offer:after,
+.discountAmount--90 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-90%";
+}
+.discountAmount--89 td.offer a:after,
+.discountAmount--89 button.offer:after,
+.discountAmount--89 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-89%";
+}
+.discountAmount--88 td.offer a:after,
+.discountAmount--88 button.offer:after,
+.discountAmount--88 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-88%";
+}
+.discountAmount--87 td.offer a:after,
+.discountAmount--87 button.offer:after,
+.discountAmount--87 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-87%";
+}
+.discountAmount--86 td.offer a:after,
+.discountAmount--86 button.offer:after,
+.discountAmount--86 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-86%";
+}
+.discountAmount--85 td.offer a:after,
+.discountAmount--85 button.offer:after,
+.discountAmount--85 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-85%";
+}
+.discountAmount--84 td.offer a:after,
+.discountAmount--84 button.offer:after,
+.discountAmount--84 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-84%";
+}
+.discountAmount--83 td.offer a:after,
+.discountAmount--83 button.offer:after,
+.discountAmount--83 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-83%";
+}
+.discountAmount--82 td.offer a:after,
+.discountAmount--82 button.offer:after,
+.discountAmount--82 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-82%";
+}
+.discountAmount--81 td.offer a:after,
+.discountAmount--81 button.offer:after,
+.discountAmount--81 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-81%";
+}
+.discountAmount--80 td.offer a:after,
+.discountAmount--80 button.offer:after,
+.discountAmount--80 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-80%";
+}
+.discountAmount--79 td.offer a:after,
+.discountAmount--79 button.offer:after,
+.discountAmount--79 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-79%";
+}
+.discountAmount--78 td.offer a:after,
+.discountAmount--78 button.offer:after,
+.discountAmount--78 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-78%";
+}
+.discountAmount--77 td.offer a:after,
+.discountAmount--77 button.offer:after,
+.discountAmount--77 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-77%";
+}
+.discountAmount--76 td.offer a:after,
+.discountAmount--76 button.offer:after,
+.discountAmount--76 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-76%";
+}
+.discountAmount--75 td.offer a:after,
+.discountAmount--75 button.offer:after,
+.discountAmount--75 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-75%";
+}
+.discountAmount--74 td.offer a:after,
+.discountAmount--74 button.offer:after,
+.discountAmount--74 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-74%";
+}
+.discountAmount--73 td.offer a:after,
+.discountAmount--73 button.offer:after,
+.discountAmount--73 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-73%";
+}
+.discountAmount--72 td.offer a:after,
+.discountAmount--72 button.offer:after,
+.discountAmount--72 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-72%";
+}
+.discountAmount--71 td.offer a:after,
+.discountAmount--71 button.offer:after,
+.discountAmount--71 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-71%";
+}
+.discountAmount--70 td.offer a:after,
+.discountAmount--70 button.offer:after,
+.discountAmount--70 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-70%";
+}
+.discountAmount--69 td.offer a:after,
+.discountAmount--69 button.offer:after,
+.discountAmount--69 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-69%";
+}
+.discountAmount--68 td.offer a:after,
+.discountAmount--68 button.offer:after,
+.discountAmount--68 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-68%";
+}
+.discountAmount--67 td.offer a:after,
+.discountAmount--67 button.offer:after,
+.discountAmount--67 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-67%";
+}
+.discountAmount--66 td.offer a:after,
+.discountAmount--66 button.offer:after,
+.discountAmount--66 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-66%";
+}
+.discountAmount--65 td.offer a:after,
+.discountAmount--65 button.offer:after,
+.discountAmount--65 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-65%";
+}
+.discountAmount--64 td.offer a:after,
+.discountAmount--64 button.offer:after,
+.discountAmount--64 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-64%";
+}
+.discountAmount--63 td.offer a:after,
+.discountAmount--63 button.offer:after,
+.discountAmount--63 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-63%";
+}
+.discountAmount--62 td.offer a:after,
+.discountAmount--62 button.offer:after,
+.discountAmount--62 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-62%";
+}
+.discountAmount--61 td.offer a:after,
+.discountAmount--61 button.offer:after,
+.discountAmount--61 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-61%";
+}
+.discountAmount--60 td.offer a:after,
+.discountAmount--60 button.offer:after,
+.discountAmount--60 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-60%";
+}
+.discountAmount--59 td.offer a:after,
+.discountAmount--59 button.offer:after,
+.discountAmount--59 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-59%";
+}
+.discountAmount--58 td.offer a:after,
+.discountAmount--58 button.offer:after,
+.discountAmount--58 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-58%";
+}
+.discountAmount--57 td.offer a:after,
+.discountAmount--57 button.offer:after,
+.discountAmount--57 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-57%";
+}
+.discountAmount--56 td.offer a:after,
+.discountAmount--56 button.offer:after,
+.discountAmount--56 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-56%";
+}
+.discountAmount--55 td.offer a:after,
+.discountAmount--55 button.offer:after,
+.discountAmount--55 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-55%";
+}
+.discountAmount--54 td.offer a:after,
+.discountAmount--54 button.offer:after,
+.discountAmount--54 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-54%";
+}
+.discountAmount--53 td.offer a:after,
+.discountAmount--53 button.offer:after,
+.discountAmount--53 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-53%";
+}
+.discountAmount--52 td.offer a:after,
+.discountAmount--52 button.offer:after,
+.discountAmount--52 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-52%";
+}
+.discountAmount--51 td.offer a:after,
+.discountAmount--51 button.offer:after,
+.discountAmount--51 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-51%";
+}
+.discountAmount--50 td.offer a:after,
+.discountAmount--50 button.offer:after,
+.discountAmount--50 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-50%";
+}
+.discountAmount--49 td.offer a:after,
+.discountAmount--49 button.offer:after,
+.discountAmount--49 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-49%";
+}
+.discountAmount--48 td.offer a:after,
+.discountAmount--48 button.offer:after,
+.discountAmount--48 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-48%";
+}
+.discountAmount--47 td.offer a:after,
+.discountAmount--47 button.offer:after,
+.discountAmount--47 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-47%";
+}
+.discountAmount--46 td.offer a:after,
+.discountAmount--46 button.offer:after,
+.discountAmount--46 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-46%";
+}
+.discountAmount--45 td.offer a:after,
+.discountAmount--45 button.offer:after,
+.discountAmount--45 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-45%";
+}
+.discountAmount--44 td.offer a:after,
+.discountAmount--44 button.offer:after,
+.discountAmount--44 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-44%";
+}
+.discountAmount--43 td.offer a:after,
+.discountAmount--43 button.offer:after,
+.discountAmount--43 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-43%";
+}
+.discountAmount--42 td.offer a:after,
+.discountAmount--42 button.offer:after,
+.discountAmount--42 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-42%";
+}
+.discountAmount--41 td.offer a:after,
+.discountAmount--41 button.offer:after,
+.discountAmount--41 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-41%";
+}
+.discountAmount--40 td.offer a:after,
+.discountAmount--40 button.offer:after,
+.discountAmount--40 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-40%";
+}
+.discountAmount--39 td.offer a:after,
+.discountAmount--39 button.offer:after,
+.discountAmount--39 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-39%";
+}
+.discountAmount--38 td.offer a:after,
+.discountAmount--38 button.offer:after,
+.discountAmount--38 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-38%";
+}
+.discountAmount--37 td.offer a:after,
+.discountAmount--37 button.offer:after,
+.discountAmount--37 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-37%";
+}
+.discountAmount--36 td.offer a:after,
+.discountAmount--36 button.offer:after,
+.discountAmount--36 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-36%";
+}
+.discountAmount--35 td.offer a:after,
+.discountAmount--35 button.offer:after,
+.discountAmount--35 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-35%";
+}
+.discountAmount--34 td.offer a:after,
+.discountAmount--34 button.offer:after,
+.discountAmount--34 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-34%";
+}
+.discountAmount--33 td.offer a:after,
+.discountAmount--33 button.offer:after,
+.discountAmount--33 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-33%";
+}
+.discountAmount--32 td.offer a:after,
+.discountAmount--32 button.offer:after,
+.discountAmount--32 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-32%";
+}
+.discountAmount--31 td.offer a:after,
+.discountAmount--31 button.offer:after,
+.discountAmount--31 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-31%";
+}
+.discountAmount--30 td.offer a:after,
+.discountAmount--30 button.offer:after,
+.discountAmount--30 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-30%";
+}
+.discountAmount--29 td.offer a:after,
+.discountAmount--29 button.offer:after,
+.discountAmount--29 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-29%";
+}
+.discountAmount--28 td.offer a:after,
+.discountAmount--28 button.offer:after,
+.discountAmount--28 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-28%";
+}
+.discountAmount--27 td.offer a:after,
+.discountAmount--27 button.offer:after,
+.discountAmount--27 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-27%";
+}
+.discountAmount--26 td.offer a:after,
+.discountAmount--26 button.offer:after,
+.discountAmount--26 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-26%";
+}
+.discountAmount--25 td.offer a:after,
+.discountAmount--25 button.offer:after,
+.discountAmount--25 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-25%";
+}
+.discountAmount--24 td.offer a:after,
+.discountAmount--24 button.offer:after,
+.discountAmount--24 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-24%";
+}
+.discountAmount--23 td.offer a:after,
+.discountAmount--23 button.offer:after,
+.discountAmount--23 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-23%";
+}
+.discountAmount--22 td.offer a:after,
+.discountAmount--22 button.offer:after,
+.discountAmount--22 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-22%";
+}
+.discountAmount--21 td.offer a:after,
+.discountAmount--21 button.offer:after,
+.discountAmount--21 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-21%";
+}
+.discountAmount--20 td.offer a:after,
+.discountAmount--20 button.offer:after,
+.discountAmount--20 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-20%";
+}
+.discountAmount--19 td.offer a:after,
+.discountAmount--19 button.offer:after,
+.discountAmount--19 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-19%";
+}
+.discountAmount--18 td.offer a:after,
+.discountAmount--18 button.offer:after,
+.discountAmount--18 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-18%";
+}
+.discountAmount--17 td.offer a:after,
+.discountAmount--17 button.offer:after,
+.discountAmount--17 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-17%";
+}
+.discountAmount--16 td.offer a:after,
+.discountAmount--16 button.offer:after,
+.discountAmount--16 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-16%";
+}
+.discountAmount--15 td.offer a:after,
+.discountAmount--15 button.offer:after,
+.discountAmount--15 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-15%";
+}
+.discountAmount--14 td.offer a:after,
+.discountAmount--14 button.offer:after,
+.discountAmount--14 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-14%";
+}
+.discountAmount--13 td.offer a:after,
+.discountAmount--13 button.offer:after,
+.discountAmount--13 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-13%";
+}
+.discountAmount--12 td.offer a:after,
+.discountAmount--12 button.offer:after,
+.discountAmount--12 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-12%";
+}
+.discountAmount--11 td.offer a:after,
+.discountAmount--11 button.offer:after,
+.discountAmount--11 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-11%";
+}
+.discountAmount--10 td.offer a:after,
+.discountAmount--10 button.offer:after,
+.discountAmount--10 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-10%";
+}
+.discountAmount--9 td.offer a:after,
+.discountAmount--9 button.offer:after,
+.discountAmount--9 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-9%";
+}
+.discountAmount--8 td.offer a:after,
+.discountAmount--8 button.offer:after,
+.discountAmount--8 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-8%";
+}
+.discountAmount--7 td.offer a:after,
+.discountAmount--7 button.offer:after,
+.discountAmount--7 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-7%";
+}
+.discountAmount--6 td.offer a:after,
+.discountAmount--6 button.offer:after,
+.discountAmount--6 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-6%";
+}
+.discountAmount--5 td.offer a:after,
+.discountAmount--5 button.offer:after,
+.discountAmount--5 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-5%";
+}
+.discountAmount--4 td.offer a:after,
+.discountAmount--4 button.offer:after,
+.discountAmount--4 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-4%";
+}
+.discountAmount--3 td.offer a:after,
+.discountAmount--3 button.offer:after,
+.discountAmount--3 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-3%";
+}
+.discountAmount--2 td.offer a:after,
+.discountAmount--2 button.offer:after,
+.discountAmount--2 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-2%";
+}
+.discountAmount--1 td.offer a:after,
+.discountAmount--1 button.offer:after,
+.discountAmount--1 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-1%";
+}
+.discountAmount--0 td.offer a:after,
+.discountAmount--0 button.offer:after,
+.discountAmount--0 .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "-0%";
+}
+.menu td.offer a:after,
+.menu button.offer:after {
+  content: "Menu";
+  display: block;
+  width: 100%;
+  max-width: 28px;
+  margin: auto;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size: 9px;
+  line-height: 10px;
+  font-weight: 600;
+  color: #e14123;
+  overflow: hidden;
+}
+@media only screen and (max-width: 516px) {
+  .menu td.offer a:after,
+  .menu button.offer:after {
+    font-size: 10px;
+    line-height: 13px;
+  }
+}
+.menu td.offer a.selected:after,
+.menu button.offer.selected:after,
+.menu td.offer a.ui-state-active:after,
+.menu button.offer.ui-state-active:after {
+  color: white;
+}
+.menu .dhpLegend-marker--currentSelectedOfferAvailable:after {
+  content: "Menu";
+  font-size: 7px;
+}
+td.cross-st a:after,
+button.cross-st:after {
+  content: "\25CF";
+  display: block;
+  text-align: right;
+  margin: 0 3px;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-weight: normal;
+  color: #e14123;
+  line-height: 80%;
+}
+.saleTypes .saleTypes-categoryHeader {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.saleType {
+  margin-bottom: 8px;
+  padding: 12px;
+  background: #f8f8f8;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+}
+.saleType .saleType-headerContainer {
+  vertical-align: sub;
+}
+.saleType .saleType-header,
+.saleType .saleType-header--inline,
+.saleType .saleType-header--promo,
+.crossSellNormalSaleType .saleType-header--inline {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4e4e56;
+}
+.saleType .saleType-header--inline {
+  display: inline;
+}
+@media only screen and (max-width: 516px) {
+  .saleType .saleType-header--inline {
+    display: block;
+    margin: 0;
+  }
+}
+.saleType .saleType-header--promo {
+  color: #e14123;
+}
+.saleType .saleType-button {
+  float: right;
+  border-radius: 2px;
+  margin-left: 8px;
+}
+.saleType .saleType-button a {
+  text-decoration: none;
+}
+.saleType .saleType-exclusion {
+  margin: 0;
+  font-size: 0.8em;
+}
+.saleType .saleType-simpleReservation {
+  margin-left: 0.5em;
+  font-size: 0.8em;
+}
+@media only screen and (max-width: 516px) {
+  .saleType .saleType-simpleReservation {
+    margin: 0;
+  }
+}
+.saleType .saleType-toggleDetails {
+  margin: 0.5em 0 0 0;
+  font-size: 0.8em;
+  text-decoration: underline;
+}
+.saleType .saleType-details {
+  font-size: 0.9em;
+}
+.saleType .button--callToAction {
+  font-size: 1rem;
+}
+.crossSellNormalSaleType .saleType-header--inline {
+  display: inline;
+}
+@media only screen and (max-width: 516px) {
+  .crossSellNormalSaleType .saleType-header--inline {
+    display: block;
+    margin: 0;
+  }
+}
+.nyroModalBg {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  opacity: 0.9;
+}
+#more-pax-list {
+  margin-top: 0.5em;
+  font-size: 0.9em;
+}
+#more-pax-list select {
+  background-color: white;
+  background-position: 80% 50%;
+  padding: 3px 20px 3px 8px;
+  vertical-align: middle;
+  box-shadow: 0 1px 0 0 #cdcdcd, 0 0 1px 0 #cdcdcd;
+}
+.nyroModalCont {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  max-width: 500px;
+  background: #fff;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.body--payment .nyroModalCont {
+  max-width: 700px;
+}
+.body--payment .nyroModalCont .cguContent {
+  padding: 16px;
+}
+@media only screen and (max-width: 516px) {
+  .nyroModalCont {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 517px) and (max-width: 949px), only screen and (min-width: 950px) and (max-width: 1128px), only screen and (min-width: 1129px) {
+  .nyroModalCont {
+    width: 50%;
+  }
+  .body--payment .nyroModalCont {
+    width: 75%;
+  }
+}
+.nmReposition {
+  position: absolute;
+}
+.nyroModalCloseButton {
+  top: -20px;
+  right: -20px;
+  width: 30px;
+  height: 30px;
+  text-indent: -9999em;
+  background: url("/bundles/lafourchettemodulereservation/images/icon-close.png");
+  z-index: 2000;
+}
+.checkbox label {
+  font-size: 0.9rem;
+}
+.loading {
+  background-color: transparent;
+}
+.button--callToAction[style*="background: #008700"],
+.button--callToAction[style*="background: #00B500"],
+.button--callToAction[style*="background: rgb(0, 135, 0)"] {
+  background: #589442 !important;
+}
+.button--callToAction:disabled {
+  background-color: gray;
+}
+.cguContent {
+  padding: 16px;
+}
+img[src*="http://tracking.lafourchette"] {
+  float: left;
+}
+.tooltip {
+  position: relative;
+}
+.tooltip:hover {
+  text-decoration: none;
+}
+.tooltip:hover:after {
+  text-transform: none;
+  color: #fff;
+  font-size: 12px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+  content: attr(title);
+  padding: 3px 8px;
+  white-space: nowrap;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  z-index: 8;
+  white-space: pre-wrap;
+  width: 150px;
+  max-width: 150px;
+}
+.tooltip:hover:before {
+  content: "";
+  border: solid;
+  border-color: rgba(0, 0, 0, 0.8) transparent;
+  border-width: 6px 6px 0 6px;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 14px;
+  z-index: 9;
+}
+.waitListDisclaimer .waitListDisclaimer-message {
+  padding-left: 2em;
+  position: relative;
+  color: orange;
+}
+.waitListDisclaimer .waitListDisclaimer-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: orange;
+}
+.waitListDisclaimer .waitListDisclaimer-button {
+  background: white;
+}
+.waitListCustomer .waitListCustomer-title {
+  text-transform: uppercase;
+}
+.text-center {
+  text-align: center;
+}
+#cde-iframe {
+  width: 100%;
+}
+#submit-stripe.disabled,
+#submit-cde.disabled {
+  background-color: gray;
+  cursor: no-drop;
+}
+.cardLogosContainer,
+.debitCardLogosContainer,
+.creditCardLogosContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cardLogo {
+  margin: 2px;
+}
+.stripe-payment-form {
+  margin: 8px;
+  height: 152px;
+}
+.stripe-payment-form-col > .StripeElement,
+.stripe-payment-form-row > .StripeElement,
+.stripe-payment-form-row > input {
+  border: 1px solid #c5c5ca;
+  box-sizing: border-box;
+  border-radius: 2px;
+  font-size: 1rem;
+  padding: 8px;
+  width: 100%;
+}
+.stripe-payment-form-row {
+  margin: 8px 0;
+}
+.stripe-payment-form-row .stripe-payment-form-col {
+  float: left;
+}
+.stripe-payment-form-row .stripe-payment-form-col.stripe-payment-form-col-left {
+  margin-right: 8px;
+  width: calc(75% - 8px);
+}
+.stripe-payment-form-row .stripe-payment-form-col.stripe-payment-form-col-right {
+  width: 25%;
+}
+.StripeElement--invalid {
+  box-shadow: 0 0 0 2px red;
+}
+.error {
+  color: #e74c3c;
+  padding: 10px;
+  border-radius: 4px;
+  background: rgba(231, 76, 60, 0.1);
+  font-weight: bold;
+}
+ul.error {
+  padding-left: 30px;
+}

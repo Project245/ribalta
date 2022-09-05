@@ -1,0 +1,48 @@
+body{
+    background-color: #F8F2E7;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    /* position: fixed; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F8F2E7;
+}
+.navbar .left{
+    display: flex;
+}
+.navbar .left ul{
+    align-items: center;
+    padding: 15px 0;
+}
+.navbar .left ul a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+}
+.navbar .centre{
+    text-align: center;
+}
+.navbar .right{
+    padding: 20px 0;
+    align-items: center;
+    justify-content: center;
+}
+.navbar .right a{
+    text-decoration: none;
+    color: black;
+    border: 2px solid salmon;
+    padding: 5px 15px;
+    border-radius: 3rem;
+}
+
+.main .content{
+    display: flex;
+}
+.main > .content > .left{
+    background-color: aqua;
+}
+.main .content .right{
+    background-color: orange;
+}
